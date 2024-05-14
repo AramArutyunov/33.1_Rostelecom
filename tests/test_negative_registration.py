@@ -12,7 +12,7 @@ import time
                               'special', 'number'])
 
 def test_get_registration_invalid_format_firstname(chrome_browser, firstname):
-    """TC-028 Негативные сценарии регистрации на сайте, невалидный формат имени"""
+    """TC-027 Негативные сценарии регистрации на сайте, невалидный формат имени"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -52,7 +52,7 @@ def test_get_registration_invalid_format_firstname(chrome_browser, firstname):
                               'special', 'number'])
 
 def test_get_registration_invalid_format_lastname(chrome_browser, lastname):
-    """TC-029 -  Негативные сценарии регистрации на сайте, невалидный формат фамилии"""
+    """TC-028 -  Негативные сценарии регистрации на сайте, невалидный формат фамилии"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -90,7 +90,7 @@ def test_get_registration_invalid_format_lastname(chrome_browser, lastname):
 
 def test_get_registration_invalid_format_phone(chrome_browser, phone):
 
-    """TC-030 - Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
+    """TC-029 - Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -130,7 +130,7 @@ def test_get_registration_invalid_format_phone(chrome_browser, phone):
 
 def test_get_registration_invalid_format_phone(chrome_browser, email):
 
-    """TC-031 - Негативные сценарии регистрации на сайте, невалидный формат e-mail"""
+    """TC-030 - Негативные сценарии регистрации на сайте, невалидный формат e-mail"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -167,7 +167,7 @@ def test_get_registration_invalid_format_phone(chrome_browser, email):
                          ids=['living phone', 'living email'])
 
 def test_get_registration_living_account(chrome_browser, address):
-    """ ТС-026 Регистрация нового пользователя через уже использованый ранее e-mail """
+    """ ТС-025 Регистрация нового пользователя через уже использованый ранее e-mail """
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -202,7 +202,7 @@ def test_get_registration_living_account(chrome_browser, address):
 
 def test_get_registration_diff_pass_and_pass_conf(chrome_browser):
 
-    """ TC-027 Регистрация на сайте, проверка на совпадение паролей в
+    """ TC-026 Регистрация на сайте, проверка на совпадение паролей в
     полях ввода 'Пароль' и 'Подтверждение пароля'."""
 
     page = AuthPage(chrome_browser)
