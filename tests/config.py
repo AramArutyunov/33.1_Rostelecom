@@ -16,7 +16,7 @@ class Config:
 
     FIRSTNAME = "Арам"
     LASTNAME = "Арутюнов"
-    NEW_EMAIL = 'yahanig853@ahieh.com'
+    NEW_EMAIL = "yahanig853@ahieh.com"
     NEW_PASSWORD = "NewPass123"
 
 def generate_string_rus(n):
