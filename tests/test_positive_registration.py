@@ -5,7 +5,7 @@ import pytest
 import time
 
 def test_create_new_acc(chrome_browser):
-    """ ТС-016 Регистрация нового пользователя через e-mail при использовании валидных данных """
+    """ ТС-025 Регистрация нового пользователя через e-mail при использовании валидных данных """
     page = AuthPage(chrome_browser)
     page.go_to_reg_page()
     chrome_browser.implicitly_wait(5)
