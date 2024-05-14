@@ -5,7 +5,7 @@ from pages.locators import AuthLocators
 from tests.config import Config
 
 def test_login_with_invalid_phone(chrome_browser):
-    """ TC-012 Авторизация по номеру телефона при использовании невалидного номера телефона """
+    """ TC-019 Авторизация по номеру телефона при использовании невалидного номера телефона """
     page = AuthPage(chrome_browser)
     page.enter_login(Config.INVALID_PHONE)
     page.enter_pass(Config.VALID_PASSWORD)
@@ -17,7 +17,7 @@ def test_login_with_invalid_phone(chrome_browser):
            page.check_color(forgot_pass) == '#ff4f12'
 
 def test_login_with_invalid_email(chrome_browser):
-    """ TC-013 Авторизация по e-mail при использовании невалидного e-mail """
+    """ TC-020 Авторизация по e-mail при использовании невалидного e-mail """
     page = AuthPage(chrome_browser)
     page.click_email_tab()
     page.enter_login(Config.INVALID_EMAIL)
@@ -30,7 +30,7 @@ def test_login_with_invalid_email(chrome_browser):
            page.check_color(forgot_pass) == '#ff4f12'
 
 def test_login_with_valid_email_invalid_pass(chrome_browser):
-    """ TC-014 Авторизация по e-mail при использовании невалидного пароля """
+    """ TC-023 Авторизация по e-mail при использовании невалидного пароля """
     page = AuthPage(chrome_browser)
     page.click_email_tab()
     page.enter_login(Config.VALID_EMAIL)
@@ -43,7 +43,7 @@ def test_login_with_valid_email_invalid_pass(chrome_browser):
            page.check_color(forgot_pass) == '#ff4f12'
 
 def test_login_with_valid_phone_invalid_pass(chrome_browser):
-    """ TC-015 Авторизация по номеру телефона при использовании невалидного пароля """
+    """ TC-022 Авторизация по номеру телефона при использовании невалидного пароля """
     page = AuthPage(chrome_browser)
     page.enter_login(Config.VALID_PHONE)
     page.enter_pass(Config.INVALID_PASSWORD)
