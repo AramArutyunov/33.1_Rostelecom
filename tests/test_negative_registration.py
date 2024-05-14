@@ -12,7 +12,7 @@ import time
                               'special', 'number'])
 
 def test_get_registration_invalid_format_firstname(chrome_browser, firstname):
-    """TC-019 - TC-026 Негативные сценарии регистрации на сайте, невалидный формат имени"""
+    """TC-019 Негативные сценарии регистрации на сайте, невалидный формат имени"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -52,7 +52,7 @@ def test_get_registration_invalid_format_firstname(chrome_browser, firstname):
                               'special', 'number'])
 
 def test_get_registration_invalid_format_lastname(chrome_browser, lastname):
-    """TC-027 - TC-034 Негативные сценарии регистрации на сайте, невалидный формат фамилии"""
+    """TC-020 -  Негативные сценарии регистрации на сайте, невалидный формат фамилии"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -90,7 +90,7 @@ def test_get_registration_invalid_format_lastname(chrome_browser, lastname):
 
 def test_get_registration_invalid_format_phone(chrome_browser, phone):
 
-    """TC-035 - TC-039 Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
+    """TC-021 - Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
@@ -130,7 +130,7 @@ def test_get_registration_invalid_format_phone(chrome_browser, phone):
 
 def test_get_registration_invalid_format_phone(chrome_browser, email):
 
-    """TC-040 - TC-047 Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
+    """TC-022 - Негативные сценарии регистрации на сайте, невалидный формат номера телефона"""
 
     # Нажимаем на кнопку Зарегистрироваться:
     page = AuthPage(chrome_browser)
