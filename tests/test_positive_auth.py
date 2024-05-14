@@ -16,25 +16,25 @@ def test_default_login(chrome_browser):
     assert page.get_text_from_login() == Config.DEFAULT_LOGIN_TEXT
 
 def test_cheсk_about_slogan(chrome_browser):
-    """ TC-003 На странице Авторизации присутствует продуктовый слоган ЛК "Ростелеком ID" """
+    """ TC-003a На странице Авторизации присутствует продуктовый слоган ЛК "Ростелеком ID" """
     page = AuthPage(chrome_browser)
     assert page.check_info_about_slogan() == Config.TAGLINE_TEXT
 
 def test_chek_info_for_users(chrome_browser):
-    """ TC-004 На странице Авторизации присутствует вспомогательная информация для клиента в левой части страницы """
+    """ TC-003b На странице Авторизации присутствует вспомогательная информация для клиента в левой части страницы """
     page = AuthPage(chrome_browser)
     assert "Пользовательское соглашение" in page.find_element(GlobalLocators.LEFT_BLOCK).text.split('\n'), \
         "В левой части страницы отсутствует вспомогательная информация для клиентов"
 
 def test_active_tab_1(chrome_browser):
-    """ TC-005 При вводе почты, "Таб" автоматически переключается с "Телефона" на "Почту """
+    """ TC-004 При вводе почты, "Таб" автоматически переключается с "Телефона" на "Почту """
     page = AuthPage(chrome_browser)
     page.enter_login(Config.VALID_EMAIL)
     page.enter_pass(Config.VALID_PASSWORD)
     assert page.find_element(AuthLocators.AUTH_placeholder).text == 'Электронная почта'
 
 def test_active_tab_2(chrome_browser):
-    """ TC-006 При вводе номера телефона, "Таб" автоматически переключается с "Почты" на "Телефон" """
+    """ TC-005 При вводе номера телефона, "Таб" автоматически переключается с "Почты" на "Телефон" """
     page = AuthPage(chrome_browser)
     page.click_email_tab()
     page.enter_login(Config.VALID_PHONE)
@@ -42,7 +42,7 @@ def test_active_tab_2(chrome_browser):
     assert page.find_element(AuthLocators.AUTH_placeholder).text == 'Мобильный телефон'
 
 def test_active_tab_3(chrome_browser):
-    """ TC-007 При вводе номера телефона, "Таб" автоматически переключается с "Логина" на "Телефон" """
+    """ TC-006 При вводе номера телефона, "Таб" автоматически переключается с "Логина" на "Телефон" """
     page = AuthPage(chrome_browser)
     page.click_login_tab()
     page.enter_login(Config.VALID_PHONE)
@@ -52,7 +52,7 @@ def test_active_tab_3(chrome_browser):
     assert page.find_element(AuthLocators.AUTH_placeholder).text == 'Мобильный телефон'
 
 def test_active_tab_4(chrome_browser):
-    """ TC-008 При вводе номера телефона, "Таб" автоматически переключается с "Лицевого счета" на "Телефон" """
+    """ TC-007 При вводе номера телефона, "Таб" автоматически переключается с "Лицевого счета" на "Телефон" """
     page = AuthPage(chrome_browser)
     page.click_LS_tab()
     page.enter_login(Config.VALID_PHONE)
@@ -61,7 +61,7 @@ def test_active_tab_4(chrome_browser):
     assert page.find_element(AuthLocators.AUTH_placeholder).text == 'Мобильный телефон'
 
 def test_active_tab_5(chrome_browser):
-    """ TC-009 При вводе почты, "Таб" автоматически переключается с "Логина" на "Почту" """
+    """ TC-008 При вводе почты, "Таб" автоматически переключается с "Логина" на "Почту" """
     page = AuthPage(chrome_browser)
     page.click_login_tab()
     page.enter_login(Config.VALID_EMAIL)
@@ -69,7 +69,7 @@ def test_active_tab_5(chrome_browser):
     assert page.find_element(AuthLocators.AUTH_placeholder).text == 'Электронная почта'
 
 def test_login_with_valid_phone(chrome_browser):
-    """ TC-010 Авторизация по номеру телефона при использовании валидных данных """
+    """ TC-009 Авторизация по номеру телефона при использовании валидных данных """
     page = AuthPage(chrome_browser)
     page.find_captcha()
     page.enter_login(Config.VALID_PHONE)
@@ -80,7 +80,7 @@ def test_login_with_valid_phone(chrome_browser):
     page.logout_btn_click()
 
 def test_login_with_valid_email(chrome_browser):
-    """ TC-011 Авторизация по e-mail при использовании валидных данных """
+    """ TC-010 Авторизация по e-mail при использовании валидных данных """
     page = AuthPage(chrome_browser)
     page.find_captcha()
     page.click_email_tab()
