@@ -5,7 +5,7 @@ class Config:
 
     VALID_EMAIL = "zobyhh@gmail.com"
     VALID_PHONE = "+79667858499"
-    INVALID_PHONE = "+79667431614"
+    INVALID_PHONE = "+79667878787"
     VALID_PASSWORD = "Zq159753"
     INVALID_EMAIL = "Test@gmail.com"
     INVALID_PASSWORD = "InvalidPass123"
