@@ -6,7 +6,7 @@
 
 Ссылка на актуальные требования к сайту: https://docs.google.com/document/d/1qXyps0WQGLu2Xa7UXHRpIiGvV0sASdBEdotXxzl3orI/edit
 
-Ссылка на тест-кейсы и баг-репорты
+Ссылка на тест-кейсы и баг-репорты https://docs.google.com/spreadsheets/d/1uapiXxZn60vpvVKEao0q2aQQUojP6aL2C1WJ7XluU3g/edit#gid=2140391695
 
 # Методы при разработке проекта
 
