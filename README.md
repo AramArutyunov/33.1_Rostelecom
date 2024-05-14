@@ -4,9 +4,9 @@
 
 Объект тестирования: Ростелеком (https://b2c.passport.rt.ru/)
 
-[Ссылка на актуальные требования к сайту: https://docs.google.com/document/d/1qXyps0WQGLu2Xa7UXHRpIiGvV0sASdBEdotXxzl3orI/edit
+Ссылка на актуальные требования к сайту: https://docs.google.com/document/d/1qXyps0WQGLu2Xa7UXHRpIiGvV0sASdBEdotXxzl3orI/edit
 
-
+Ссылка на тест-кейсы и баг-репорты
 
 # Методы при разработке проекта
 
